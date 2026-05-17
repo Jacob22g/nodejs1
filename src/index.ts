@@ -11,7 +11,7 @@ import itemsRoutes from "./routes/items.routes";
 import authRouter from "./routes/auth.routes";
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env['PORT'] || 3000;
 
 // ── Middleware ─────────────────────────────────────────
 app.use(helmetMiddleware);
