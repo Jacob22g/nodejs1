@@ -63,6 +63,18 @@ npm run dev
 
 ## API
 
+### Health (public)
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/health` | Returns service status |
+| GET | `/` | Same as `/health` |
+
+Response:
+```json
+{ "status": "ok" }
+```
+
 ### Auth (public)
 
 | Method | Endpoint | Description |
