@@ -68,7 +68,6 @@ npm run dev
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | GET | `/health` | Returns service status |
-| GET | `/` | Same as `/health` |
 
 Response:
 ```json

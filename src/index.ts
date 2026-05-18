@@ -21,7 +21,6 @@ app.use(rateLimiterMiddleware);
 app.use(express.json());
 
 // ── Routes ─────────────────────────────────────────────
-app.get('/', (_req, res) => res.json({ status: 'ok' }));
 app.get('/health', (_req, res) => res.json({ status: 'ok' }));
 app.use('/auth',  authRouter);   // public
 app.use('/items', itemsRoutes);  // protected
