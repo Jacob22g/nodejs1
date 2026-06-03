@@ -9,6 +9,7 @@ import {
 } from './middleware';
 import itemsRoutes from "./routes/items.routes";
 import authRouter from "./routes/auth.routes";
+import healthRouter from "./routes/health.routes";
 
 const app = express();
 const PORT = process.env['PORT'] || 3000;
@@ -21,7 +22,7 @@ app.use(rateLimiterMiddleware);
 app.use(express.json());
 
 // ── Routes ─────────────────────────────────────────────
-app.get('/health', (_req, res) => res.json({ status: 'ok' }));
+app.use(healthRouter);           // /health + /ready (no auth)
 app.use('/auth',  authRouter);   // public
 app.use('/items', itemsRoutes);  // protected
 
